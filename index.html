@@ -270,7 +270,7 @@
       <div class="photo-wrap">
         <div class="photo-ring photo-ring-1"></div>
         <div class="photo-ring photo-ring-2"></div>
-        <img src="https://github.com/Thanishka22.png?size=460" alt="Thanishka Pamireddy" class="profile-photo"/>
+        <img src="https://github.com/Thanishka22.png?size=460" id="profile-photo" alt="Thanishka Pamireddy" class="profile-photo"/>
         <div class="photo-glow"></div>
       </div>
       <div class="about-heading">
@@ -591,5 +591,15 @@
 
 <footer>Designed &amp; built by <span>Thanishka Pamireddy</span> · Data Scientist</footer>
 
+<script>
+  fetch('https://api.github.com/users/Thanishka22')
+    .then(r => r.json())
+    .then(data => {
+      if (data.avatar_url) {
+        document.getElementById('profile-photo').src = data.avatar_url + '&size=460';
+      }
+    })
+    .catch(() => {});
+</script>
 </body>
 </html>
