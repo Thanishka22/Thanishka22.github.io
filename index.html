@@ -265,8 +265,6 @@
 
 
     @media(max-width:1000px){
-      .about-top{flex-direction:column;align-items:flex-start;gap:2rem}
-      .about-body .bio{grid-template-columns:1fr}
       .split-grid{grid-template-columns:1fr;gap:3rem}
       .proj-grid,.contact-wrap{grid-template-columns:1fr}
       .pub-card{flex-direction:column}
@@ -274,15 +272,27 @@
       .exp-item::before{left:120px}
       .exp-dot{left:120px}
     }
-    @media(max-width:640px){
-      nav{padding:1rem 1.5rem}
-      .nav-links{gap:1rem}
-      .section{padding:5rem 1.5rem}
-      .hero-stats{gap:1.5rem;flex-wrap:wrap}
+    @media(max-width:760px){
+      .icon-nav{top:auto;left:10px;right:10px;bottom:10px;width:auto;height:64px;flex-direction:row;justify-content:space-around;padding:0;border-radius:16px}
+      .icon-nav a{gap:0.15rem}
+      .icon-nav a .ic{font-size:1.15rem}
+      .page-wrap{top:10px;left:10px;right:10px;bottom:84px}
+      .main-card{flex-direction:column}
+      .identity-col{flex:0 0 auto;width:100%;height:auto;min-height:0;overflow:visible;display:flex;align-items:center;gap:0.9rem;padding:0.9rem 1.1rem;border-right:none;border-bottom:1px solid var(--border)}
+      .id-banner{display:none}
+      .id-avatar-wrap{position:static;transform:none;width:52px;height:52px;border-width:3px;box-shadow:none;flex-shrink:0}
+      .id-body{padding:0;text-align:left;flex:1;min-width:0}
+      .id-name{font-size:0.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .id-role{font-size:0.68rem;margin-bottom:0}
+      .id-socials,.id-cta,.id-divider,.id-footer{display:none}
+      .content-col{width:100%}
+      .content-inner{padding:1.5rem 1.2rem}
+      .sec-head h2{font-size:1.25rem}
       .exp-item{grid-template-columns:1fr}
       .exp-item::before,.exp-dot{display:none}
       .exp-left{padding:2rem 0 0;text-align:left}
       .exp-right{padding:0.5rem 0 2rem}
+      .sk-card,.edu-card,.proj-card{padding:1.4rem 1.2rem}
     }
   </style>
 </head>
